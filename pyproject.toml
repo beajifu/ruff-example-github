@@ -10,6 +10,15 @@ packages = [{include = "ruff_example_github"}]
 python = "^3.11"
 
 
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.5.0"
+
+[tool.ruff]
+select = ["E"]
+
+# Never enforce `E501` (line length violations).
+ignore = ["E501"]
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
